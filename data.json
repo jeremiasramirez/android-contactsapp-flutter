@@ -1,0 +1,10 @@
+//https://jsonplaceholder.typicode.com/users
+//https://jsonplaceholder.typicode.com/users/1
+
+{
+  "contacts": [
+    "name": "your name",
+    "photo": "initial-name"  
+    "number": "your number",
+  ]
+}
