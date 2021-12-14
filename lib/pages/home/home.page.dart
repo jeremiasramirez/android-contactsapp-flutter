@@ -1,3 +1,4 @@
+import 'package:contactsapp/widgets/home/home.banner.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget {
@@ -11,6 +12,11 @@ class HomeFull extends State<Home> {
         debugShowCheckedModeBanner: false,
         title: 'Contacts app',
         theme: ThemeData.dark(),
-        home: Scaffold(body: Text("Hola home!!")));
+        routes: {
+          '/start': (context) => Home(),
+          '/home': (context) => Home(),
+        },
+        initialRoute: '/home',
+        home: Scaffold(appBar: BannerHome().banner("Contact List.")));
   }
 }
