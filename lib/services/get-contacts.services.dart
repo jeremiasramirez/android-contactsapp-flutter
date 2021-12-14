@@ -7,6 +7,6 @@ class ContactServices extends StatefulWidget {
 
 class ContactServicesFull extends State<ContactServices> {
   Widget build(context) {
-    return Text('Hello services');
+    return Text('Hello services.');
   }
 }

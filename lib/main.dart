@@ -1,20 +1,21 @@
+import 'package:contactsapp/pages/home/home.page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(Main());
+  runApp(MainFull());
 }
 
-class Main extends StatelessWidget {
-  constructor() {}
+class MainFull extends StatefulWidget {
+  Main createState() => new Main();
+}
 
+class Main extends State<MainFull> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: 'Flutter Demo',
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
-        ),
-        home: Scaffold(body: Text("Hola!!")));
+        title: 'Contacts app',
+        theme: ThemeData.dark(),
+        home: Scaffold(body: Home()));
   }
 }
