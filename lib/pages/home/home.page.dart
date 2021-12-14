@@ -12,11 +12,6 @@ class HomeFull extends State<Home> {
         debugShowCheckedModeBanner: false,
         title: 'Contacts app',
         theme: ThemeData.dark(),
-        routes: {
-          '/start': (context) => Home(),
-          '/home': (context) => Home(),
-        },
-        initialRoute: '/home',
         home: Scaffold(appBar: BannerHome().banner("Contact List.")));
   }
 }

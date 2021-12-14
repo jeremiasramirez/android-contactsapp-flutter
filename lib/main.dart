@@ -16,6 +16,10 @@ class Main extends State<MainFull> {
         debugShowCheckedModeBanner: false,
         title: 'Contacts app',
         theme: ThemeData.dark(),
-        home: Scaffold(body: Home()));
+        routes: {
+          '/start': (context) => Home(),
+          '/home': (context) => Home(),
+        },
+        initialRoute: '/home');
   }
 }
