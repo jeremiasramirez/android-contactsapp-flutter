@@ -1,3 +1,4 @@
+import 'package:contactsapp/pages/contact/contact.page.dart';
 import 'package:contactsapp/pages/home/home.page.dart';
 import 'package:flutter/material.dart';
 
@@ -17,7 +18,7 @@ class Main extends State<MainFull> {
         title: 'Contacts app',
         theme: ThemeData.dark(),
         routes: {
-          // '/start': (context) => Home(),
+          '/contact': (context) => ContactPage(),
           '/home': (context) => Home(),
         },
         initialRoute: '/home');

@@ -1,3 +1,4 @@
+import 'package:contactsapp/pages/contact/contact.page.dart';
 import 'package:contactsapp/services/get-contacts.services.dart';
 import 'package:contactsapp/widgets/home/home.banner.dart';
 import 'package:flutter/material.dart';
@@ -18,7 +19,7 @@ class HomeFull extends State<Home> {
         title: 'Contacts app',
         theme: ThemeData.dark(),
         home: Scaffold(
-            appBar: BannerHome().banner("Contact List."),
+            appBar: BannerHome().build(context, "Contact List"),
             body: ListView(
               physics: ScrollPhysics(),
               children: this.contacts,
@@ -60,6 +61,7 @@ class HomeFull extends State<Home> {
                 borderRadius: BorderRadius.circular(70))),
         onTap: () {
           print(element);
+          Navigator.pushNamed(context, '/contact');
         },
         trailing: Container(
             width: 110,
