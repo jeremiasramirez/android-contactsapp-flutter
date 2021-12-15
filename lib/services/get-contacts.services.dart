@@ -9,4 +9,10 @@ class ContactServicesFull extends State<ContactServices> {
   Widget build(context) {
     return Text('Hello services.');
   }
+
+  Future getAll() {
+    var uri = Uri.parse('https://jsonplaceholder.typicode.com/users');
+
+    return http.get(uri);
+  }
 }

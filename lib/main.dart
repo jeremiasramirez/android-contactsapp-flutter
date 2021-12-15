@@ -17,7 +17,7 @@ class Main extends State<MainFull> {
         title: 'Contacts app',
         theme: ThemeData.dark(),
         routes: {
-          '/start': (context) => Home(),
+          // '/start': (context) => Home(),
           '/home': (context) => Home(),
         },
         initialRoute: '/home');
