@@ -23,7 +23,7 @@ class HomeFull extends State<Home> {
         home: Scaffold(
             floatingActionButton: ZoomIn(
                 child: FloatingActionButton(
-                    backgroundColor: Colors.blue[700],
+                    backgroundColor: Colors.blue[900],
                     child: Icon(Icons.search, color: Colors.white),
                     onPressed: () {})),
             appBar: BannerHome().build(context, "Contact List"),
@@ -58,7 +58,7 @@ class HomeFull extends State<Home> {
   ListTile item(element) {
     return ListTile(
         contentPadding: EdgeInsets.all(10),
-        leading: BounceInLeft(
+        leading: FadeInUp(
             child: Container(
                 width: 50,
                 height: 70,
@@ -70,7 +70,7 @@ class HomeFull extends State<Home> {
         onTap: () {
           Navigator.pushNamed(context, '/contact');
         },
-        trailing: BounceInLeft(
+        trailing: FadeInUp(
             child: Container(
                 width: 70,
                 height: 40,
@@ -82,7 +82,7 @@ class HomeFull extends State<Home> {
                       this.buttonForCall(Icon(Icons.more_vert,
                           color: Colors.blue[400], size: 25))
                     ]))),
-        title: BounceInLeft(
+        title: FadeInUp(
             child: Container(
                 margin: EdgeInsets.only(right: 50),
                 child: Column(
@@ -114,7 +114,7 @@ class HomeFull extends State<Home> {
           skeletumData.add(ListTile(
               title: Column(
             children: [
-              BounceInLeft(
+              FadeInUp(
                   child: Container(
                       width: 310,
                       height: 45,
