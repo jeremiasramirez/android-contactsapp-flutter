@@ -1,5 +1,5 @@
 import 'package:animate_do/animate_do.dart';
-import 'package:contactsapp/pages/contact/contact.page.dart';
+//import 'package:contactsapp/pages/contact/contact.page.dart';
 import 'package:contactsapp/services/get-contacts.services.dart';
 import 'package:contactsapp/widgets/home/home.banner.dart';
 import 'package:flutter/cupertino.dart';

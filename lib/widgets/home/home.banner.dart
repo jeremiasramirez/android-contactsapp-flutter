@@ -4,7 +4,7 @@ class BannerHome {
   AppBar build(context, String title) {
     return AppBar(
       backgroundColor: Colors.transparent,
-      leading: FlatButton(
+      leading: TextButton(
           onPressed: () {
             Navigator.pop(context, '/contact');
           },
