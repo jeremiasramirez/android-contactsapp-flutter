@@ -116,7 +116,7 @@ class HomeFull extends State<Home> {
             children: [
               FadeInUp(
                   child: Container(
-                      width: 310,
+                      width: double.infinity,
                       height: 45,
                       child: Row(children: [
                         Container(

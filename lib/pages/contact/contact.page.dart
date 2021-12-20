@@ -19,18 +19,21 @@ class ContactPageFull extends State<ContactPage> {
         title: 'Contact',
         theme: ThemeData.dark(),
         home: Scaffold(
-            floatingActionButton: ZoomIn(
-                child: FloatingActionButton(
-                    backgroundColor: Colors.blue[900],
-                    child: Icon(Icons.edit_outlined, color: Colors.white),
-                    onPressed: () {})),
             appBar: BannerHome().build(context, "Profile"),
             body: Column(children: [
               this.imageForContact(),
               SizedBox(height: 17),
               this.numberAndNameContact(),
               SizedBox(height: 25),
-              this.sectionVideoAndCall()
+              this.sectionVideoAndCall(),
+              SizedBox(height: 15),
+              this.titleHistory(),
+              SizedBox(height: 12),
+              this.historyCalls("Incoming", "809-222-2222", "3:40 PM"),
+              SizedBox(height: 12),
+              this.historyCalls("Outgoing", "829-111-1212", "10:02 AM"),
+              SizedBox(height: 60),
+              this.editContact()
             ])));
   }
 
@@ -98,5 +101,70 @@ class ContactPageFull extends State<ContactPage> {
                 borderRadius: BorderRadius.circular(100))),
       ),
     ));
+  }
+
+  Widget titleHistory() {
+    return Text("History",
+        style: TextStyle(
+            fontSize: 15,
+            color: Colors.grey[500],
+            fontWeight: FontWeight.w400,
+            fontFamily: 'ubuntu'));
+  }
+
+  BounceInUp editContact() {
+    return BounceInUp(
+        child: Container(
+            width: 320,
+            height: 35,
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(5),
+                color: Colors.blue[900]),
+            child: Center(
+                child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text("Editor"),
+                SizedBox(width: 7),
+                Icon(Icons.edit, size: 17)
+              ],
+            ))));
+  }
+
+  BounceInUp historyCalls(String typecoming, String number, String time) {
+    return BounceInUp(
+        child: Container(
+            width: 320,
+            padding: EdgeInsets.only(left: 8, top: 6, bottom: 3, right: 10),
+            height: 50,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Icon(Icons.phone_callback_outlined),
+                Column(children: [
+                  Text(typecoming,
+                      style: TextStyle(
+                          fontSize: 15,
+                          color: Colors.grey[300],
+                          fontFamily: 'ubuntu')),
+                  SizedBox(height: 4),
+                  Text("\t\t\t\t\t" + number,
+                      style: TextStyle(
+                          fontSize: 12,
+                          color: Colors.grey[500],
+                          fontWeight: FontWeight.w300,
+                          fontFamily: 'arial'))
+                ]),
+                Text(time,
+                    style: TextStyle(
+                        fontSize: 14,
+                        color: Colors.grey[500],
+                        fontWeight: FontWeight.w400,
+                        fontFamily: 'ubuntu'))
+              ],
+            ),
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(5),
+                color: Colors.grey[800])));
   }
 }
